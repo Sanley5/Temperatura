@@ -1,0 +1,72 @@
+package br.usjt.hellospringboot.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Tempo implements Serializable {
+	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+  private String descricao;
+  private String semana;
+  private Doube latitude;
+  private Double longitude;
+  private int tempMin;
+  private int tempMax;
+  private int humidade;
+  private int hora;
+    
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	public String getSemana() {
+		return semana;
+	}
+	public void setSemana(String semana) {
+		this.semana = semana;
+	}
+	public Double getLatitude() {
+		return latitude;
+	}
+	public void setLatitude (Double latitude) {
+		this.latitude = latitude;
+	}
+	public Double getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(Double longitude) {
+		this.longitude = longitude;
+	}
+	public int getTempMin() {
+		return tempMin;
+	}
+	public void seTempMin(int tempMin) {
+		this.tempMin = tempMin;
+	}
+  public int getTempMax(){
+    return tempMax;
+  }
+  public void setTempMax(int tempMax){
+    this.tempMax = tempMax;
+  }
+  public int getHumidade(){
+    return humidade;
+  }
+  public void setHumidade(int humidade){
+    this.humidade = humidade;
+  }
+  public int getHora (){
+    return hora;
+  }
+  public void setHora(int hora){
+    this.hora = hora;
+  }
+}
